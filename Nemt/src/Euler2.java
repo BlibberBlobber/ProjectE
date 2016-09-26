@@ -5,7 +5,6 @@ import java.util.Scanner;
  * whose values do not exceed four million, find the 
  * sum of the even-valued terms.
  */
-
 public class Euler2 {
 
 	public static void main(String[] args) {
