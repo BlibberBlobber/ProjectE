@@ -26,4 +26,5 @@ public class Euler1 {
 		scan.close();
 	}
 	
+	
 }
