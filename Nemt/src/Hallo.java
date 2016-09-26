@@ -4,6 +4,13 @@ public class Hallo {
 		System.out.println("hej");
 		System.out.println("fedt fedt fedt");
 		//yolo
+		
+		
+		
+		
+		System.out.println("yolo");
+		
+		
 	}
 }
 
