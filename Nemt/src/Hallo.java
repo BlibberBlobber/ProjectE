@@ -6,10 +6,10 @@ public class Hallo {
 		//yolo
 		
 		
-		
+		// Du er en **************
 		
 		System.out.println("yolo");
-		
+		System.out.println("yolo");
 		
 	}
 }
