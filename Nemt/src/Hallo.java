@@ -14,6 +14,8 @@ public class Hallo {
 		
 		int dum = 9001;
 		dum = dum + 3*dum;
+		System.out.println(dum);
+		
 	}
 }
 
