@@ -11,6 +11,9 @@ public class Hallo {
 		System.out.println("yolo");
 		System.out.println("yolo");
 		
+		
+		int dum = 9001;
+		dum = dum + 3*dum;
 	}
 }
 
