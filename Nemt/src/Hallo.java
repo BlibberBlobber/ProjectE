@@ -16,6 +16,7 @@ public class Hallo {
 		dum = dum + 3*dum;
 		System.out.println(dum);
 		dum = 3*4 + dum;
+		dum = 4*dum;
 		
 	}
 }
