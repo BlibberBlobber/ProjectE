@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Euler2 {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		/*Scanner scan = new Scanner(System.in); Her er der en scanner */
 		
 		long a, b, c, sum;
 		a=1; b=2; c=3;
@@ -21,6 +21,6 @@ public class Euler2 {
 			c = a+b;
 		}
 		System.out.println("evenFib = " + sum);
-		scan.close();
+		/* scan.close(); Her bliver den lukket */
 	}
 }
