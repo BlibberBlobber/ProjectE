@@ -25,6 +25,5 @@ public class Euler1 {
 		System.out.println("final: " + sum);
 		scan.close();
 	}
-	
-	
 }
+
