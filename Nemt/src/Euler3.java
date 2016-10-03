@@ -11,10 +11,10 @@ public static void main (String[] args) {
 	System.out.println("Vi undersøger følgende tal: "+primeOne + "\n");
 	int p = 2;
 	long undersogtTal = primeOne;
-	while ( p <= primeOne ){
-		if (primeOne%p==0) {
-			primeOne/=p;
-			System.out.println(p + " var en prim-faktor i " + undersogtTal);
+	while ( p <= undersogtTal ){
+		if (undersogtTal%p==0) {
+			undersogtTal/=p;
+			System.out.println(p + " var en prim-faktor i " + primeOne);
 
 		}
 		else {
