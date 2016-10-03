@@ -15,10 +15,11 @@ public static void main (String[] args) {
 		if (primeOne%p==0) {
 			primeOne/=p;
 			System.out.println(p + " var en prim-faktor i " + undersogtTal);
+
 		}
 		else {
 				p++;
-		}		
+		}
 		
 	}
 }
