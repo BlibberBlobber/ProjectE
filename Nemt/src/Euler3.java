@@ -6,12 +6,21 @@ What is the largest prime factor of the number 600851475143 ?*/
 public class Euler3 {
 	
 public static void main (String[] args) {
-	int a = 5;
-	int b = 7;
-	int c = 13;
-	int d = 29;
-	System.out.println(a*b*c*d);
+	Long primeOne = new Long ("600851475142"); 
 	
+	System.out.println("Vi undersøger følgende tal: "+primeOne + "\n");
+	int p = 2;
+	long undersogtTal = primeOne;
+	while ( p <= primeOne ){
+		if (primeOne%p==0) {
+			primeOne/=p;
+			System.out.println(p + " var en prim-faktor i " + undersogtTal);
+		}
+		else {
+				p++;
+		}		
+		
+	}
 }
-
 }
+	
