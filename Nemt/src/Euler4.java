@@ -32,6 +32,7 @@ public class Euler4 {
 					p++;
 			}
 			}
+			p = 2;
 			i++;
 		}
 		
