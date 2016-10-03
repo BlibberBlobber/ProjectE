@@ -8,34 +8,7 @@ import java.util.Scanner;
 public class Euler4 {
 
 	public static void main(String[] args) {
-		Scanner primtal = new Scanner(System.in);
-		int[] femPrimtal;
-		femPrimtal = new int[5];
-		System.out.println("Indtast fem heltal");
-		femPrimtal[0] = primtal.nextInt();
-		femPrimtal[1] = primtal.nextInt();
-		femPrimtal[2] = primtal.nextInt();
-		femPrimtal[3] = primtal.nextInt();
-		femPrimtal[4] = primtal.nextInt();
-		primtal.close();
 		
-		System.out.println("Vi undersøger følgende tal: " + Arrays.toString(femPrimtal) + "\n");
-		
-		int p = 2;
-		for (int i =0; i < 5;) {
-			int counter = femPrimtal[i];
-		while ( p <= counter ){
-			if (counter%p==0) {
-				counter/=p;
-				System.out.println(p + " var en prim-faktor i " + femPrimtal[i]);
-			}
-			else {
-					p++;
-			}
-			}
-			p = 2;
-			i++;
-		}
 	}
 }
 
