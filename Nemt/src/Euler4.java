@@ -23,9 +23,10 @@ public class Euler4 {
 		
 		int p = 2;
 		for (int i =0; i < 5;) {
-		while ( p <= femPrimtal[i] ){
-			if (femPrimtal[i]%p==0) {
-				femPrimtal[i]/=p;
+			int counter = femPrimtal[i];
+		while ( p <= counter ){
+			if (counter%p==0) {
+				counter/=p;
 				System.out.println(p + " var en prim-faktor i " + femPrimtal[i]);
 			}
 			else {
@@ -35,8 +36,7 @@ public class Euler4 {
 			p = 2;
 			i++;
 		}
-		
 	}
+}
 
-	}
 
