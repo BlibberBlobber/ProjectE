@@ -1,37 +1,51 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 // A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 //
 // Find the largest palindrome made from the product of two 3-digit numbers.
 
-// Når man ganger to 3-digit tal får man et tal x*10^5 hvorfor der er 1099
-// forskellige palindrom-tal i denne størrelsesorden. 
-// Det palindrom-tal vi leder efter er summen af k+1 digits (her er k=5) for i=0 og 
-// 
 public class Euler4 {
 
 	public static void main(String[] args) {
-		
-		// forsøge at lave den sum-funktion som skal give os palindromet
-		
-		Long factor = new Long (999);
-		Long counter = new Long (factor), i = new Long (factor-1);
-		while (i <= counter && i != 0){
-			counter = counter * i;
+		System.out.print("Indtast et trecifret tal, som skal undersøges for palindromer: ");
+		Scanner input = new Scanner(System.in);
+		Long factor = input.nextLong();
+		//System.out.print("Indtast det andet tal, som skal ganges med "+factor+": ");
+		//Long i = input.nextLong();
+		input.close();
+		//Long factor = new Long (111);
+		Long counter = new Long (0), i = new Long (999);
+		while (i > 100 ){ // Dette loop tester vha StringBuilder
+			counter = factor * i;
 			String isPalindrom = Long.toString(counter);
-			new StringBuilder().reverse().toString();
-			System.out.println(counter);
-			System.out.println();
-			  i--;;
-			//if (isPalindrom == checker){
-			//	System.out.println(counter + " er et palindrom.");
-			//}
+			String checker = new StringBuilder(isPalindrom).reverse().toString();
+			if (isPalindrom.equals(checker)){
+				System.out.println(factor + " * " + i + " = " + counter + " er et palindrom.");
+				}
+			  i--;
+		}	
+		long palindrome = 0;
+		long reverse = 0;
+		long remainder;
+		i = (long) 999;
+		System.out.println("Vi undersøger multipli af "+ factor +" og " + i +" (og nedefter)");
+		while (i > 100 ){  // Dette loop tester vha MATH (dobbelt-loop-whoop-whoop)
+			counter = factor * i;
+			palindrome = counter;
+			remainder = 0;
+			reverse = 0;
+				while ( palindrome != 0) {
+					remainder = palindrome % 10;
+					reverse = reverse * 10 + remainder;
+					palindrome = palindrome / 10;
+				}
+			//System.out.println(reverse + " og " + counter); // Denne skriver ud for hvert loop
+			if ( reverse == counter){
+				System.out.println(factor + " * " + i + " = " + counter + " er et palindrom.");
+			}
+			i--;
 		}
-		
-			
 		}
-		
 	}
 
 
