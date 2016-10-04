@@ -15,14 +15,20 @@ public class Euler4 {
 		
 		// forsøge at lave den sum-funktion som skal give os palindromet
 		
-		int k=5, i=1, b = 10; // b er 10 fordi vi er i 10-tals-system
-		double a = 0;
-		double palindrome = ((k*k) - k)/2;
-		while (palindrome <= 1000000) {
-			palindrome *= i;
-			i++;
+		Long factor = new Long (999);
+		Long counter = new Long (factor), i = new Long (factor-1);
+		while (i <= counter && i != 0){
+			counter = counter * i;
+			String isPalindrom = Long.toString(counter);
+			new StringBuilder().reverse().toString();
+			System.out.println(counter);
+			System.out.println();
+			  i--;;
+			//if (isPalindrom == checker){
+			//	System.out.println(counter + " er et palindrom.");
+			//}
 		}
-		System.out.println(palindrome);
+		
 			
 		}
 		
