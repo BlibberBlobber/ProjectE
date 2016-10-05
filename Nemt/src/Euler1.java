@@ -14,7 +14,7 @@ public class Euler1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Insert number");
+		System.out.print("Insert number: ");
 		int sum = 0;
 		int userInput = scan.nextInt();
 		
