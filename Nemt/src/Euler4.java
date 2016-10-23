@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 // A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -9,12 +12,12 @@ public class Euler4 {
 	public static void main(String[] args) {
 		System.out.print("Indtast et trecifret tal, som skal undersøges for palindromer: ");
 		Scanner input = new Scanner(System.in);
-		Long factor = input.nextLong();
-		//System.out.print("Indtast det andet tal, som skal ganges med "+factor+": ");
-		//Long i = input.nextLong();
+		long factor = input.nextLong();
+		
 		input.close();
 		//Long factor = new Long (111);
-		Long counter = new Long (0), i = new Long (999);
+		long counter = 0;
+		long i = 999;
 		while (i > 100 ){ // Dette loop tester vha StringBuilder
 			counter = factor * i;
 			String isPalindrom = Long.toString(counter);
@@ -27,8 +30,12 @@ public class Euler4 {
 		long palindrome = 0;
 		long reverse = 0;
 		long remainder;
-		i = (long) 999;
-		System.out.println("Vi undersøger multipli af "+ factor +" og " + i +" (og nedefter)");
+		factor = 111;
+		i = 999;
+		int k = 0;
+		ArrayList pal = new ArrayList();
+		for (factor = 111; factor < i; factor++){
+			//System.out.println("Vi undersøger multipli af "+ factor +" og " + i +" (og nedefter)");
 		while (i > 100 ){  // Dette loop tester vha MATH (dobbelt-loop-whoop-whoop)
 			counter = factor * i;
 			palindrome = counter;
@@ -41,11 +48,19 @@ public class Euler4 {
 				}
 			//System.out.println(reverse + " og " + counter); // Denne skriver ud for hvert loop
 			if ( reverse == counter){
-				System.out.println(factor + " * " + i + " = " + counter + " er et palindrom.");
+				//System.out.println(factor + " * " + i + " = " + counter + " er et palindrom.");
+				pal.add(counter);
+				k++;
 			}
 			i--;
 		}
+		i = 999;
 		}
+		long[] a = new long[k];
+		pal.toArray(); 
+		
+		System.out.println(a.toString());
+	}
 	}
 
 
