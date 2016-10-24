@@ -8,12 +8,16 @@ public class Euler5 {
 
 	public static void main(String[] args){
 		int n=1;
-		int i = 1;
+		int i=1;
 		
-		for (n = 1; i%n==0;){
-			if (!(i%n==0)) i++;
+		for (n = 1; n<=20;){
 			
+			if (i%n==0) n++;
+			if (!(i%n==0)) i++;
+			if (n==20) System.out.println(i);
 		}
+		
+		
 		
 	}
 }
