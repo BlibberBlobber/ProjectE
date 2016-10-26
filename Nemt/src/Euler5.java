@@ -9,25 +9,22 @@ import java.util.ArrayList;
 public class Euler5 {
 
 	public static void main(String[] args){
-		int n=1;
-		int i=1;
-		ArrayList<Integer> result = new ArrayList();
-	while (i>20 && 1000>i) {
-		n = 1;
+		int n=20;
+		int i=20;
+		ArrayList<Integer> result = new ArrayList<Integer>();
 		while (n<=20){
-			if (i%n==0) n++;
-			if (!(i%n==0)) i++;
-			if (n==20){
-				System.out.println(i);
-				result.add(i);
+			if(i%n==0){
+				n--;
 			}
-		} 
-		i++;
+			if(n==1){
+				result.add(i);
+				break;
+			}
+			if(i%n!=0){
+				i++;
+				n=20;
+			}
 		}
-	
-		
-		
-		
-		
+		System.out.println(result.toString());		
 	}
 }
