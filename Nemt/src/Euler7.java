@@ -10,17 +10,20 @@ public class Euler7 {
 	public static void main(String[] args) {
 		boolean prime = false;
 		int test = 0;
+		int j = 2;
 		ArrayList<Integer> primTal = new ArrayList<Integer>();
-			for(int i = 2; i<30000; i++){
-				for(int j = i-1; j>0;j--){
-					test = (i%(j));
-					//System.out.println(test);
-					if (test != 0) {
-						primTal.add(i);
-						break;
+			for(int i = 2; i<300000; i++){
+				System.out.println(i);
+				j = 2;
+				while(j<=i){
+					if ((i%j) == 0 && j<i) continue;
+					if (i%j != 0) {
+						j++;
 					}
+					if (j == i) primTal.add(i);
+					}
+				System.out.println(primTal.toString());
 				}
-		}
 		int hej = primTal.get(10001);
 		System.out.println(hej);
 		
