@@ -38,6 +38,7 @@ public class Sensor{
 			catch(InterruptedException e){
 				e.printStackTrace();
 			}
+			return DELTAMAX;
 		}
 		
 		public void setup(){
