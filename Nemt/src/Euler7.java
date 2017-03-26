@@ -9,25 +9,24 @@ public class Euler7 {
 
 	public static void main(String[] args) {
 		boolean prime = false;
-		int test = 0;
+		//int test = 0;
 		int j = 2;
+		int i = 1;
 		ArrayList<Integer> primTal = new ArrayList<Integer>();
-			for(int i = 2; i<300000; i++){
-				System.out.println(i);
-				j = 2;
-				while(j<=i){
-					if ((i%j) == 0 && j<i) continue;
-					if (i%j != 0) {
-						j++;
-					}
-					if (j == i) primTal.add(i);
-					}
-				System.out.println(primTal.toString());
+		primTal.add(2);
+		while (primTal.size() < 10002) {
+			for (j = 2; j < i; j++) {
+				if (i % j == 0) {
+					prime = false;
+					break;
 				}
-		int hej = primTal.get(10001);
+				if (i % j != 0)	prime = true;
+			}
+			if (prime) primTal.add(i);
+			//System.out.println(primTal.toString());
+			i++;
+		}
+		int hej = primTal.get(10000);
 		System.out.println(hej);
-		
-
 	}
-
 }
